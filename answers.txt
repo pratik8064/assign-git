@@ -1,4 +1,39 @@
 • What is a gitignore file and what should it include for a Java project?
+
+Gitignore file is a file containing list of files or directories which are intentionally untracked
+so that git won't show changes to those files when you check for modified files and user won't 
+push those files to remote repository
+
+For java project it should include .class and if using IDE like eclipse then
+.project, .tmp, .settings/, .classpath files should be included.
+
+
 • What does fast-forward in Git mean?
+
+In git, if new branch is ahead of commits compared to old branch then while merging git will simply
+move pointer pointing to old branch forward to latest commit in new branch (there should be no
+divergent branches). Since all changes from previous commit are already there in new branch there wont
+be issue with merging. This is called fast-forward in Git.
+
 • Why should you have different branches?
+
+Having different branches allows developer to keep track of development and code management.
+If developer is working on some feature and want to make sure changes made by him/her 
+are not going to break other code workflow then it is always helpeful to create new 
+branch and start making changes into that branch, once new code is tested later it can be
+merged with main branch.
+
+To keep track of software development, developer can always create new branch for new version
+of software to be released, so that main branch will have working code of older version
+and new branch will have all new features ready to be tested and deployed.
+
+
 • In a project how many remote Git repositories do you usually have?
+
+Usually for small project, there is only 1 remote Git repository needed, but you can add more remote
+repositories for better software development management for larger projects.
+For e.g. if team of front end developers are working on UI and integration of UI with backend RESTful services,
+they dont need to have access to backend code. So every time they make changes, backend developers 
+don't need to take pull for that code since they are working independantly from frontend 
+developers. Another reason to have multiple remote repositories is you can restrict code access
+for those who are not working on that part of project for security purposes.
