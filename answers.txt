@@ -10,11 +10,10 @@ For java project it should include .class and if using IDE like eclipse then
 
 • What does fast-forward in Git mean?
 
-In git, if there are no diverging branches and one branch is ahead of commits compared to 
-new branch then while merging git will simply move pointer pointed of old branch lagging 
-those commits forward to latest commit in new branch. Since all changes from previous 
-commit are already there in new branch there wont be issue with merging. This is called
-fast-forward in Git.
+In git, if new branch is ahead of commits compared to old branch then while merging git will simply
+move pointer pointing to old branch forward to latest commit in new branch (there should be no
+divergent branches). Since all changes from previous commit are already there in new branch there wont
+be issue with merging. This is called fast-forward in Git.
 
 • Why should you have different branches?
 
